@@ -1,0 +1,17 @@
+@id=45
+POST http://localhost:3003/pedidos/{{id}}
+Content-Type: application/json
+
+{
+    "client_name": "Priscilla Ramos",
+    "delivery_date": "15/10/2022",
+    "quantity": 5
+}
+
+###
+
+GET http://localhost:3003/pedidos
+
+###
+
+GET  http://localhost:3003/estoque
