@@ -1,2 +1,2 @@
 # E-comerce-Fullstack
-Projeto FullStack em fase de finalizalçao
+Projeto FullStack feito no React em fase de finalizalçao
