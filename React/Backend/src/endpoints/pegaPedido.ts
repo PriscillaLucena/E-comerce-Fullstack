@@ -1,6 +1,6 @@
 
 import { Request, Response } from "express"
-import { PedidoDataBase } from "../database/PedidoDataBase"
+import { PedidoDataBase } from "../Data/PedidoDataBase"
 
 export const pegaPedido = async (req: Request, res: Response): Promise<any> => {
     let errorCode = 400

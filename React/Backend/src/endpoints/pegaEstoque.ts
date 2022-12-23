@@ -1,4 +1,4 @@
-import { EstoqueDataBase } from "../database/EstoqueDataBase"
+import { EstoqueDataBase } from "../Data/EstoqueDataBase"
 import { Request, Response } from "express";
 
 

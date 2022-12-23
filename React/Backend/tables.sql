@@ -6,6 +6,13 @@ price DEC(5,2) NOT NULL,
 qty_stock INT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS Ecommerce_pedidos (
+    id VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL,
+    delivery_date INT NOT NULL, 
+    shopping VARCHAR(255) 
+);
+
 INSERT INTO `Ecommerce_estoque` (id, name, price, qty_stock)
 VALUES (16,	AZEITE  PORTUGUÊS EXTRA VIRGEM GALLO 500ML,	20.49, 158),
 (18, BEBIDA ENERGÉTICA VIBE 2L,	8.99, 659),

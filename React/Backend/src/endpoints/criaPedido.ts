@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { Pedidos } from "../models/Pedidos"
-import { PedidoDataBase } from "../database/PedidoDataBase"
+import { PedidoDataBase } from "../Data/PedidoDataBase"
 import { PedidoType } from "../types/PedidoType";
 
 export const criaPedido = async (req: Request, res: Response): Promise<void> => {
