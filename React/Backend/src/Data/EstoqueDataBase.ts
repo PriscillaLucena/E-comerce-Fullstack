@@ -3,12 +3,7 @@ import { BaseDatabase } from "./BaseDatabase"
 export class EstoqueDataBase extends BaseDatabase {
     public static TABLE_NAME = "Ecommerce_estoque"
 
-    public async pegaEstoque(
-        id: string,
-        name: string,
-        price: number,
-        qty_stock: number
-    ): Promise<void> {
+    public async pegaEstoque(): Promise<any> {
         try {
             const response = await this.getConnection()
                 .select('*')
@@ -23,4 +18,5 @@ export class EstoqueDataBase extends BaseDatabase {
         }
     }
 };
+
 
