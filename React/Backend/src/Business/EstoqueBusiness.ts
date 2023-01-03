@@ -1,19 +1,29 @@
 import { EstoqueDataBase } from "../Data/EstoqueDataBase"
+import { EstoqueInfo } from "../models/Estoque";
 
 const estoqueDB = new EstoqueDataBase();
 
 export class EstoqueBusiness {
-    async pegaEstoque(): Promise<any> {
+    public async pegaEstoque(): Promise<any> {
         try {
 
-            const result = await estoqueDB.pegaEstoque()
+            const queryResult: any = await estoqueDB.pegaEstoque()
 
-            if (result.length < 1) {
+            console.log("query business", queryResult)
+
+            if (queryResult.length < 1) {
                 // errorCode = 404
                 // throw new Error("Cadastre novos produtos!");
             }
 
-            return result
+            const estoqueInfos: EstoqueInfo = {
+                id: queryResult[0].id,
+                name: queryResult[0].name,
+                price: queryResult[0].price,
+                qty_stock: queryResult[0].qty_stock
+            };
+
+            return estoqueInfos
 
         } catch (error) {
             if (error instanceof Error) {

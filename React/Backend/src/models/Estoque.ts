@@ -1,12 +1,12 @@
 export class Estoque {
     constructor(
-        protected id: string,
+        protected id: number,
         protected name: string,
         protected price: number,
         protected qty_stock: number
     ) { }
 
-    getId(): string {
+    getId(): number {
         return this.id
     };
 
@@ -22,9 +22,14 @@ export class Estoque {
         return this.qty_stock
     };
 
-    setId(id: string) {
+    setId(id: number) {
         this.id = id
     };
+
+    setName(name: string) {
+        this.name = name
+    };
+
 
     setPrice(price: number) {
         this.price = price
@@ -36,7 +41,7 @@ export class Estoque {
 };
 
 export interface EstoqueInfo {
-    id: string,
+    id: number,
     name: string,
     price: number,
     qty_stock: number

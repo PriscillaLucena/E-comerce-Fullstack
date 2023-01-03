@@ -5,17 +5,17 @@ const estoqueBusiness = new EstoqueBusiness();
 
 export class EstoqueController {
 
-    async pegaEstoque(req: Request, res: Response): Promise<any> {
+    public async pegaEstoque(req: Request, res: Response): Promise<any> {
+        try {
 
-        const result = await estoqueBusiness.pegaEstoque()
+            const result = await estoqueBusiness.pegaEstoque()
 
-        res.status(200).send({ estoque: result })
+            res.status(200).send({ "estoque": result })
 
-    } catch(error: any) {
-        if (error instanceof Error) {
-            // throw new CustomError(400, error.message);
-        }
+        } catch (error: any) {
+            if (error instanceof Error) {
+                // throw new CustomError(400, error.message);
+            }
+        };
     };
-
-
-}
+};
