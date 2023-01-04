@@ -1,16 +1,19 @@
 import { BaseDatabase } from "./BaseDatabase"
 
 export class EstoqueDataBase extends BaseDatabase {
+    
     private static TABLE_NAME = "Ecommerce_estoque";
 
     public async pegaEstoque(): Promise<any> {
         try {
-            const result = await this.getConnection().raw(`
-            SELECT * FROM ${'Ecommerce_estoque'}
-            `);
+            
+            const result = await this.getConnection()
+           .select('*') 
+           .into(EstoqueDataBase.TABLE_NAME)
 
-            return result[0]
+           console.log(result, "result db")
 
+            return result
 
         } catch (error) {
             if (error instanceof Error) {
