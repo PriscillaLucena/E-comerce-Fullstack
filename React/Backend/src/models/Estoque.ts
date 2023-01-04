@@ -8,18 +8,41 @@ export class Estoque {
 
     getId(): number {
         return this.id
-    }
+    };
 
     getName(): string {
         return this.name
-    }
+    };
 
     getPrice(): number {
         return this.price
-    }
+    };
 
     getQty(): number {
         return this.qty_stock
-    }
+    };
 
+    setId(id: number) {
+        this.id = id
+    };
+
+    setName(name: string) {
+        this.name = name
+    };
+
+
+    setPrice(price: number) {
+        this.price = price
+    };
+
+    setQty(qty_stock: number) {
+        this.qty_stock = qty_stock
+    };
 };
+
+export interface EstoqueInfo {
+    id: number,
+    name: string,
+    price: number,
+    qty_stock: number
+}
