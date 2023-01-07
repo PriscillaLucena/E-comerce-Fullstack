@@ -40,9 +40,3 @@ export class Estoque {
     };
 };
 
-export interface EstoqueInfo {
-    id: number,
-    name: string,
-    price: number,
-    qty_stock: number
-}

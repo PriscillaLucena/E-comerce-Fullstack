@@ -1,4 +1,4 @@
-import { PedidoType } from "../types/PedidoType"
+import { PedidoType } from "../../Data/model/PedidoType"
 
 export class Pedidos {
     constructor(
@@ -36,4 +36,11 @@ export class Pedidos {
         return this.pedidos.product_name
     }
 
+    setId (id: number) {
+        id = this.id
+    }
+
+    setClientName (name: string) {
+        name = this.name
+    }
 };

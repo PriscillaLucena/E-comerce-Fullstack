@@ -8,7 +8,7 @@ qty_stock INT NOT NULL
 
 CREATE TABLE IF NOT EXISTS Ecommerce_pedidos (
     id VARCHAR(20) PRIMARY KEY,
-    name VARCHAR(255) UNIQUE NOT NULL,
+    client_name VARCHAR(255) UNIQUE NOT NULL,
     delivery_date INT NOT NULL, 
     shopping VARCHAR(255) 
 );

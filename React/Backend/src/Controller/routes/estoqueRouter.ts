@@ -1,5 +1,5 @@
 import express from "express";
-import { EstoqueController } from "../Controller/EstoqueController";
+import { EstoqueController } from "../EstoqueController";
 
 export const estoqueRouter = express.Router();
 

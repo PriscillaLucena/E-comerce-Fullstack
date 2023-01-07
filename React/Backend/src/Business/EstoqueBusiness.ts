@@ -1,5 +1,6 @@
 import { EstoqueDataBase } from "../Data/EstoqueDataBase"
-import { EstoqueInfo } from "../models/Estoque";
+import { EstoqueInfoDTO } from "../Data/model/EstoqueType";
+
 
 const estoqueDB = new EstoqueDataBase();
 
@@ -16,7 +17,7 @@ export class EstoqueBusiness {
                 // throw new Error("Cadastre novos produtos!");
             }
 
-            const estoqueInfos: EstoqueInfo = {
+            const estoqueInfos: EstoqueInfoDTO = {
                 id: queryResult[0].id,
                 name: queryResult[0].name,
                 price: queryResult[0].price,
