@@ -3,7 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 // import {criaPedido} from "./endpoints/criaPedido"
 // import {pegaPedido} from "./endpoints/pegaPedido"
-import { estoqueRouter } from './routes/estoqueRouter'
+import { estoqueRouter } from './Controller/routes/estoqueRouter'
 
 
 dotenv.config()
